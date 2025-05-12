@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ブリュッヒャー</title>
+    <title>シンタ</title>
     <link href="/dist/output.css" rel="stylesheet">
 </head>
 <body>
-    <div class="p-16">
-        <div class="p-8 bg-white shadow mt-24">
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0">
-                    <div>
-                    </div>
-                </div>
-            </div>
+	<header>
+		<div class="bg-black">
+			<nav class="navbar">
+				<div class="container mx-auto flex justify-between items-center py-4">
+					<a href="/" class="text-white text-2xl font-bold">シンタ</a>
+					<ul class="flex space-x-4">
+						<li><a href="/about" class="text-white hover:text-gray-400">About</a></li>
+						<li><a href="/blog" class="text-white hover:text-gray-400">Blog</a></li>
+						<li><a href="/contact" class="text-white hover:text-gray-400">Contact</a></li>
+					</ul>
+			</nav>
+		</div>
+	</header>
+
+    <div class="p-16 bg-gray-900">
+        <div class="p-8">
         
             <div class="relative">
-                <div class="w-48 h-48 bg-indigo-100 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500">
+                <div class="w-48 h-48 bg-green-400 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500">
                     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-					 width="820.000000pt" height="520.000000pt" viewBox="0 0 820.000000 520.000000"
+					width="820.000000pt" height="520.000000pt" viewBox="0 0 820.000000 520.000000"
  					preserveAspectRatio="xMidYMid meet">
 
 						<g transform="translate(0.000000,520.000000) scale(0.100000,-0.100000)"
@@ -89,18 +97,25 @@
         </div>
         
         <div class="mt-20 text-center border-b pb-12">
-            <h1 class="text-4xl font-medium text-gray-700">ブリュッヒャー(Blyukher)<span class="font-light text-gray-500"> 20歳</span></h1>
-            <p class="font-light text-gray-600 mt-3">日本国北海道函館市</p>
+            <h1 class="<text-4xl font-medium text-green-500">シンタ<span class="font-light text-green-500"> 20歳</span></h1>
+            <p class="font-light text-green-600 mt-3">日本国北海道函館市</p>
         
-            <p class="mt-8 text-gray-500">ただの学生</p>
-            <p class="mt-2 text-gray-500">公立はこだて未来大学 Future University of Hakodate</p>
+            <p class="mt-8 text-green-600">ただの学生</p>
+            <p class="mt-2 text-green-500">公立はこだて未来大学 Future University of Hakodate</p>
         </div>
         
-        <div class="mt-12 flex flex-col justify-center">
-            <p class="text-gray-600 text-center font-light lg:px-16">公立はこだて未来大学システム情報科学部1年生です。これから低レイヤーを中心に勉強していこうと思っています。あとFPGAをそのうちいじります。</p>
-        </div>
-		<div class="mt-12 flex flex-col justify-center">
-			<a class="text-blue-600 text-center font-light justify-cneter lg:px-16 underline" href="https://x.com/shisu93464200">Xのリンク</a>
+        <div class="mt-12 flex flex-col justify-center pb-80">
+            <p class="text-green-500 text-center font-light lg:px-16">公立はこだて未来大学システム情報科学部1年生です。これから低レイヤーを中心に勉強していこうと思っています。あとFPGAをそのうちいじります。</p>
+       	</div>
+		
+	</div>
+
+
+	<footer class="bg-gray-800 text-white py-4 pb-16">
+		<div class="container mx-auto text-center">
+			
+			<p>Powered by <a href="https://tailwindcss.com/" class="text-blue-500 hover:text-blue-400">Tailwind CSS</a></p>
 		</div>
+	</footer>
 </body>
 </html>
