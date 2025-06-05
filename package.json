@@ -14,5 +14,8 @@
     "postcss": "^8.5.3",
     "tailwindcss": "^4.1.4",
     "tailwindcss-cli": "^0.1.2"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
   }
 }
