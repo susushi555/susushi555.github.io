@@ -1,106 +1,110 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>シンタ</title>
-    <link href="/dist/output.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-  </head>
-  <body class="min-h-screen bg-gray-900 text-gray-100">
-    <!-- Header -->
-    <header class="sticky top-0 bg-gray-800 shadow-lg z-50">
-      <nav class="container mx-auto flex items-center justify-between py-4 px-6">
-        <a href="/" class="logo text-2xl font-extrabold text-pink-500">シンタ</a>
-        <ul class="hidden md:flex space-x-8 nav-links">
-          <li><a href="/about" class="hover:text-green-400">About</a></li>
-          <li><a href="https://note.com/hassenius_2005" class="hover:text-green-400" target="_blank">Blog</a></li>
-          <li><a href="/contact" class="hover:text-green-400">Contact</a></li>
-        </ul>
-        <!-- Mobile menu toggle -->
-        <button id="navToggle" class="md:hidden focus:outline-none text-gray-100">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
-      </nav>
-      <!-- Mobile menu -->
-      <div id="navMenu" class="hidden md:hidden bg-gray-800">
-        <ul class="flex flex-col space-y-2 p-4">
-          <li><a href="/about" class="block hover:text-green-400">About</a></li>
-          <li><a href="https://note.com/hassenius_2005" class="block hover:text-green-400" target="_blank">Blog</a></li>
-          <li><a href="/contact" class="block hover:text-green-400">Contact</a></li>
-        </ul>
-      </div>
-    </header>
 
-    <!-- Megane Section -->
-    <main>
-      <section class="bg-gray-800 py-20">
-        <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
-          <!-- Text content -->
-          <div class="w-full md:w-1/2 mt-8 md:mt-0 megane-text">
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
-              シンタ
-            </h1>
-            <p class="text-lg text-gray-400 mb-6">
-                いろいろあるよ(という予定)
-            </p>
-            <a href="/about" class="inline-block bg-pink-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-pink-400 transition">
-              詳しく見る
-            </a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>シンタ</title>
+  <link href="/dist/output.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-gray-900 text-gray-100">
+  <!-- Header -->
+  <header class="sticky top-0 bg-gray-800 shadow-lg z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="/" class="logo text-2xl font-extrabold text-pink-500">シンタ</a>
+      <ul class="hidden md:flex space-x-8 nav-links">
+        <li><a href="/about" class="hover:text-green-400">About</a></li>
+        <li><a href="https://note.com/hassenius_2005" class="hover:text-green-400" target="_blank">Blog</a></li>
+        <li><a href="/contact" class="hover:text-green-400">Contact</a></li>
+      </ul>
+      <!-- Mobile menu toggle -->
+      <button id="navToggle" class="md:hidden focus:outline-none text-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <!-- Mobile menu -->
+    <div id="navMenu" class="hidden md:hidden bg-gray-800">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="/about" class="block hover:text-green-400">About</a></li>
+        <li><a href="https://note.com/hassenius_2005" class="block hover:text-green-400" target="_blank">Blog</a></li>
+        <li><a href="/contact" class="block hover:text-green-400">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Megane Section -->
+  <main>
+    <section class="bg-gray-800 py-20">
+      <div class="container mx-auto px-6 flex flex-col-reverse md:flex-row items-center">
+        <!-- Text content -->
+        <div class="w-full md:w-1/2 mt-8 md:mt-0 megane-text">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4">
+            シンタ
+          </h1>
+          <p class="text-lg text-gray-400 mb-6">
+            いろいろあるよ(という予定)
+          </p>
+          <a href="/about"
+            class="inline-block bg-pink-500 text-gray-900 px-6 py-3 rounded-lg hover:bg-pink-400 transition">
+            詳しく見る
+          </a>
+        </div>
+        <!-- Profile image -->
+        <div class="w-full md:w-1/2 flex justify-center megane-image">
+          <div class="w-56 h-56 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition">
+            <img src="image.jpg" alt="Profile" class="w-full h-full object-cover" />
           </div>
-          <!-- Profile image -->
-          <div class="w-full md:w-1/2 flex justify-center megane-image">
-            <div class="w-56 h-56 rounded-full overflow-hidden shadow-2xl transform hover:scale-105 transition">
-              <img src="image.jpg" alt="Profile" class="w-full h-full object-cover" />
-            </div>
-          </div>
         </div>
-      </section>
-
-      <!-- Content Section -->
-      <section class="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition grid-item">
-          <h2 class="text-2xl font-semibold mb-4 text-gray-100">Projects</h2>
-          <p class="text-gray-400">何か出来たら追加予定</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition grid-item">
-          <h2 class="text-2xl font-semibold mb-4 text-gray-100">Blog</h2>
-          <p class="text-gray-400">なんか吐きます</p>
-        </div>
-        <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition grid-item">
-          <h2 class="text-2xl font-semibold mb-4 text-gray-100">Contact</h2>
-          <p class="text-gray-400">質問があればどうぞ</p>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-800 py-6">
-      <div class="container mx-auto px-6 text-center text-gray-500 footer-text">
-        &copy; 2025 シンタ. All rights reserved.
       </div>
-    </footer>
+    </section>
 
-    <script>
-      // NAV toggle
-      const navToggle = document.getElementById('navToggle');
-      const navMenu = document.getElementById('navMenu');
-      navToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('hidden');
-      });
+    <!-- Content Section -->
+    <section class="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition grid-item">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-100">Projects</h2>
+        <p class="text-gray-400">何か出来たら追加予定</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition grid-item">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-100">Blog</h2>
+        <p class="text-gray-400">なんか吐きます</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl transition grid-item">
+        <h2 class="text-2xl font-semibold mb-4 text-gray-100">Contact</h2>
+        <p class="text-gray-400">質問があればどうぞ</p>
+      </div>
+    </section>
+  </main>
 
-      // GSAP Animations
-      window.addEventListener('load', () => {
-        gsap.from('.logo', { duration: 1, y: -50, opacity: 0, ease: 'bounce.out' });
-        gsap.from('.nav-links li', { duration: 0.8, x: 50, opacity: 0, stagger: 0.2, delay: 0.5 });
-        gsap.from('.megane-text h1', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.3 });
-        gsap.from('.megane-text p', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.5 });
-        gsap.from('.megane-image', { duration: 1.2, scale: 0, opacity: 0, ease: 'elastic.out(1, 0.5)', delay: 0.6 });
-        gsap.from('.grid-item', { duration: 1, y: 30, opacity: 0, stagger: 0.2, ease: 'power2.out', delay: 0.8 });
-        gsap.from('.footer-text', { duration: 1.5, opacity: 0, ease: 'power1.out', delay: 1.2 });
-      });
-    </script>
-  </body>
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto px-6 text-center text-gray-500 footer-text">
+      &copy; 2025 シンタ. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // NAV toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    // GSAP 
+    window.addEventListener('load', () => {
+      gsap.from('.logo', { duration: 1, y: -50, opacity: 0, ease: 'bounce.out' });
+      gsap.from('.nav-links li', { duration: 0.8, x: 50, opacity: 0, stagger: 0.2, delay: 0.5 });
+      gsap.from('.megane-text h1', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.3 });
+      gsap.from('.megane-text p', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.5 });
+      gsap.from('.megane-image', { duration: 1.2, scale: 0, opacity: 0, ease: 'elastic.out(1, 0.5)', delay: 0.6 });
+      gsap.from('.grid-item', { duration: 1, y: 30, opacity: 0, stagger: 0.2, ease: 'power2.out', delay: 0.8 });
+      gsap.from('.footer-text', { duration: 1.5, opacity: 0, ease: 'power1.out', delay: 1.2 });
+    });
+  </script>
+</body>
+
 </html>
