@@ -1,3 +1,3 @@
 import { gsap } from "gsap";
 
-gsap.to(".header-color",)
+gsap.to('.tani', {rotation: -30, x: 100, duration: 1});

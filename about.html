@@ -1,55 +1,104 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
-    <link href="/dist/output.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About - シンタ</title>
+  <link href="/dist/output.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 </head>
 
-<body class="flex flex-col h-screen">
-    <header>
-        <div class="bg-black">
-            <nav class="navbar">
-                <div class="container mx-auto flex justify-between items-center py-4">
-                    <a href="/" class="text-white text-2xl font-bold">シンタ</a>
-                    <ul class="flex space-x-4">
-                        <li><a href="/about" class="text-white hover:text-gray-400">About</a></li>
-                        <li><a href="https://note.com/hassenius_2005" class="text-white hover:text-gray-400">Blog</a></li>
-                        <li><a href="/contact" class="text-white hover:text-gray-400">Contact</a></li>
-                    </ul>
-            </nav>
-        </div>
-    </header>
+<body class="min-h-screen bg-gray-900 text-gray-100">
+  <!-- Header -->
+  <header class="sticky top-0 bg-gray-800 shadow-lg z-50">
+    <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+      <a href="/" class="logo text-2xl font-extrabold text-pink-500">シンタ</a>
+      <ul class="hidden md:flex space-x-8 nav-links">
+        <li><a href="/" class="hover:text-green-400">Home</a></li>
+        <li><a href="/about" class="text-green-400 font-medium">About</a></li>
+        <li><a href="https://note.com/hassenius_2005" class="hover:text-green-400" target="_blank">Blog</a></li>
+        <li><a href="/contact" class="hover:text-green-400">Contact</a></li>
+      </ul>
+      <button id="navToggle" class="md:hidden focus:outline-none text-gray-100">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </nav>
+    <div id="navMenu" class="hidden md:hidden bg-gray-800">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="/" class="block hover:text-green-400">Home</a></li>
+        <li><a href="/about" class="block text-green-400 font-medium">About</a></li>
+        <li><a href="https://note.com/hassenius_2005" class="block hover:text-green-400" target="_blank">Blog</a></li>
+        <li><a href="/contact" class="block hover:text-green-400">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-    <main class="p-16 flex-1 bg-gray-900">
-        <div class="p-16 bg-gray-900">
-            <h1 class="text-white">学歴</h1>
-            <ul class="text-white">
-                <li>2018年小学校卒業</li>
-                <li>2018年中学校入学</li>
-                <li>2021年中学校卒業</li>
-                <li>2021年岩手県立盛岡工業高等学校入学</li>
-                <li>2021年10月岩手県立盛岡工業高等学校自主退学</li>
-                <li>2025年4月公立はこだて未来大学入学</li>
-            </ul>
+  <!-- About Megane -->
+  <section class="bg-gray-800 py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4 about-title">About Me</h1>
+      <p class="text-lg text-gray-400 mb-6 about-subtitle">
+        私について。
+      </p>
+      <div class="w-full flex justify-center about-image">
+        <div class="w-40 h-40 rounded-full overflow-hidden transform hover:scale-105 shadow-2xl transition">
+          <img src="/image.jpg" alt="Profile" class="w-full h-full object-cover" />
         </div>
+      </div>
 
-        <div>
-            <h1 class="text-white">出来ること</h1>
-            <ul class="text-white">
-                <li></li>
-            </ul>
-        </div>
-    </main>
+    </div>
+  </section>
 
-    <footer class="bg-gray-800 text-white py-4 pb-16">
-        <div class="container mx-auto text-center">
-            <p>Powered by <a href="https://tailwindcss.com/" class="text-blue-500 hover:text-blue-400">Tailwind CSS</a>
-            </p>
-        </div>
-    </footer>
+  <!-- Profile Section -->
+  <section class="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="space-y-6 profile-text">
+      <h2 class="text-3xl font-semibold text-pink-500">プロフィール</h2>
+      <p class="text-gray-400 leading-relaxed">
+        未来大学函館でシステム情報科学を学ぶ学生です。ハードウェアや低レイヤー技術、組み込み技術などに興味を持っています。
+      </p>
+      <ul class="list-disc list-inside text-gray-400">
+        <li>学歴: 公立はこだて未来大学 システム情報科学科 (2025年入学)</li>
+        <li>関心: 組み込み技術 ハードウェア web開発 </li>
+        <li>使用言語: Ruby Processing</li>
+      </ul>
+    </div>
+    <div class="space-y-6 skills-list">
+      <h2 class="text-3xl font-semibold text-pink-500">スキルセット</h2>
+      <div class="grid grid-cols-2 gap-4">
+        <span class="inline-block bg-green-700 text-gray-100 px-3 py-1 rounded-full">Processing</span>
+        <span class="inline-block bg-green-700 text-gray-100 px-3 py-1 rounded-full">Ruby</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 py-6">
+    <div class="container mx-auto px-6 text-center text-gray-500 footer-text">
+      &copy; 2025 シンタ. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // NAV toggle
+    const navToggle = document.getElementById('navToggle');
+    const navMenu = document.getElementById('navMenu');
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('hidden');
+    });
+
+    // GSAP on About
+    window.addEventListener('load', () => {
+      gsap.from('.about-title', { duration: 1, y: -50, opacity: 0, ease: 'bounce.out' });
+      gsap.from('.about-subtitle', { duration: 1, y: 30, opacity: 0, delay: 0.3 });
+      gsap.from('.about-image', { duration: 1.2, scale: 0, opacity: 0, ease: 'elastic.out(1, 0.5)', delay: 0.5 });
+      gsap.from('.profile-text', { duration: 1, x: -50, opacity: 0, delay: 0.7 });
+      gsap.from('.skills-list', { duration: 1, x: 50, opacity: 0, delay: 0.9 });
+      gsap.from('.footer-text', { duration: 1.5, opacity: 0, delay: 1.2 });
+    });
+  </script>
 </body>
 
 </html>
