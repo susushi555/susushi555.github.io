@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - シンタ</title>
     <link href="/dist/output.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-gray-900 text-gray-100">
@@ -75,23 +74,7 @@
         </div>
     </footer>
 
-    <script>
-    
-        const navToggle = document.getElementById('navToggle');
-        const navMenu = document.getElementById('navMenu');
-        navToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('hidden');
-        });
-
-        // GSAP 
-        window.addEventListener('load', () => {
-            gsap.from('.contact-title', { duration: 1, y: -50, opacity: 0, ease: 'bounce.out' });
-            //gsap.from('.logo', { duration: 1, y: -30, opacity: 0, ease: 'bounce.out' });
-            gsap.from('.nav-links li', { duration: 0.8, x: 30, opacity: 0, stagger: 0.2, delay: 0.4 });
-            gsap.from('main', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.6 });
-            gsap.from('.footer-text', { duration: 1.2, opacity: 0, ease: 'power1.out', delay: 0.8 });
-        });
-    </script>
+    <script src="dist/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - シンタ</title>
+    <link href="/dist/output.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-gray-900 text-gray-100">
+    <!-- Header -->
+    <header class="sticky top-0 bg-gray-800 shadow-lg z-50">
+        <nav class="container mx-auto flex items-center justify-between py-4 px-6">
+            <a href="/" class="logo text-2xl font-extrabold text-pink-500">シンタ</a>
+            <ul class="hidden md:flex space-x-8 nav-links">
+                <li><a href="/" class="hover:text-green-400 {{#if isHome}}text-green-400 font-medium{{/if}}">Home</a>
+                </li>
+                <li><a href="/about"
+                        class="hover:text-green-400 {{#if isAbout}}text-green-400 font-medium{{/if}}">About</a></li>
+                <li><a href="/blog"
+                        class="hover:text-green-400 {{#if isBlog}}text-green-400 font-medium{{/if}}">Blog</a></li>
+                <li><a href="/contact"
+                        class="hover:text-green-400 {{#if isContact}}text-green-400 font-medium{{/if}}">Contact</a></li>
+            </ul>
+            <button id="navToggle" class="md:hidden focus:outline-none text-gray-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </nav>
+        <div id="navMenu" class="hidden md:hidden bg-gray-800">
+            <ul class="flex flex-col space-y-2 p-4">
+                <li><a href="/"
+                        class="block hover:text-green-400 {{#if isHome}}text-green-400 font-medium{{/if}}">Home</a></li>
+                <li><a href="/about"
+                        class="block hover:text-green-400 {{#if isAbout}}text-green-400 font-medium{{/if}}">About</a>
+                </li>
+                <li><a href="/blog"
+                        class="block hover:text-green-400 {{#if isBlog}}text-green-400 font-medium{{/if}}">Blog</a></li>
+                <li><a href="/contact"
+                        class="block hover:text-green-400 {{#if isContact}}text-green-400 font-medium{{/if}}">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="container mx-auto px-6 py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-100 mb-4 contact-title">作ったもの</h1>
+            <div class="space-y-6 outputs-list">
+                <h2 class="text-3xl">まだない</h2>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 pt-auto">
+        <div class="container mx-auto px-6 text-center text-gray-500 footer-text">
+            &copy; 2025 シンタ. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="dist/main.js"></script>
+</body>
+
+</html>

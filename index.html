@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>シンタ</title>
   <link href="/dist/output.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-gray-900 text-gray-100">
@@ -65,7 +64,7 @@
     <!-- Content Section -->
     <section class="container mx-auto px-6 py-16 grid grid-cols-1 md:grid-cols-3 gap-8">
       <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl grid-item">
-        <h2 class="text-2xl font-semibold mb-4 text-gray-100">Projects</h2>
+        <h2 class="text-2xl font-semibold mb-4 text-gray-100"><a href="projects.html">作ったもの</a></h2>
         <p class="text-gray-400">何か出来たら追加予定</p>
       </div>
       <div class="bg-gray-800 p-6 rounded-lg shadow-xl hover:shadow-2xl grid-item">
@@ -86,25 +85,7 @@
     </div>
   </footer>
 
-  <script>
-    // NAV toggle
-    const navToggle = document.getElementById('navToggle');
-    const navMenu = document.getElementById('navMenu');
-    navToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('hidden');
-    });
-
-    // GSAP 
-    window.addEventListener('load', () => {
-      gsap.from('.logo', { duration: 1, y: -50, opacity: 0, ease: 'bounce.out' });
-      gsap.from('.nav-links li', { duration: 0.8, x: 50, opacity: 0, stagger: 0.2, delay: 0.5 });
-      gsap.from('.megane-text h1', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.3 });
-      gsap.from('.megane-text p', { duration: 1, y: 50, opacity: 0, ease: 'power3.out', delay: 0.5 });
-      gsap.from('.megane-image', { duration: 1.2, scale: 0, opacity: 0, ease: 'elastic.out(1, 0.5)', delay: 0.6 });
-      gsap.from('.grid-item', { duration: 1, y: 30, opacity: 0, stagger: 0.2, ease: 'power2.out', delay: 0.8 });
-      gsap.from('.footer-text', { duration: 1.5, opacity: 0, ease: 'power1.out', delay: 1.2 });
-    });
-  </script>
+  <script src="dist/main.js"></script>
 </body>
 
 </html>
