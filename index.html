@@ -4,7 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>シンタ</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="img/ore.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="img/ore.jpg">
+
+    <!-- OGP Tags -->
+    <meta property="og:title" content="シンタのホームページ | Sugimoto Portfolio">
+    <meta property="og:description" content="学部1年生シンタのポートフォリオ。制御工学、ロボティクス、低レイヤーやFPGAに興味があります。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://shinta.sakura.ne.jp/shinta/"> <!-- 公開URLに合わせて変更してください -->
+    <meta property="og:image" content="img/ore.jpg">
+    <meta property="og:site_name" content="シンタのホームページ">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="シンタのホームページ">
+    <meta name="twitter:description" content="学部1年生シンタのポートフォリオ。">
+    <meta name="twitter:image" content="img/ore.jpg">
+
+    <title>Sugimoto Portofolio</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,58 +34,93 @@
 </head>
 
 <body>
-    <header class="bg-cyan-800">
-        <center>
-            <h1 class="text-8xl dotgothic16-regular">シンタのホームページ</h1>
-        </center>
+    <!-- Overlay for menu -->
+    <div id="menu-overlay" class="fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40"></div>
+
+    <!-- Slide Menu -->
+    <nav id="slide-menu" class="fixed top-0 right-0 w-64 h-full bg-cyan-900 text-white z-50 transform translate-x-full shadow-2xl dotgothic16-regular">
+        <div class="p-6 flex flex-col h-full">
+            <div class="flex justify-end mb-8">
+                <button id="close-menu-btn" class="text-white hover:text-amber-400 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="space-y-6 text-2xl text-center">
+                <li><a href="#about" class="menu-link hover:text-amber-400 block py-2 border-b border-cyan-700">About me</a></li>
+                <li><a href="#goals" class="menu-link hover:text-amber-400 block py-2 border-b border-cyan-700">目標</a></li>
+                <li><a href="#links" class="menu-link hover:text-amber-400 block py-2 border-b border-cyan-700">リンク集</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="bg-cyan-800 p-4 relative flex items-center justify-center">
+        <div class="text-center w-full">
+            <h1 class="text-5xl md:text-8xl dotgothic16-regular text-white">シンタのホームページ</h1>
+        </div>
+        <!-- Hamburger Button -->
+        <button id="open-menu-btn" class="absolute right-4 text-white hover:text-amber-400 transition-colors z-30 p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 md:h-12 md:w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
     </header>
 
-    <section class="grid grid-cols-2 bg-amber-400">
-        <img src="img/ore.jpg" alt="俺">
-        <center class="mr-100">
-            <h1 class="text-4xl pt-16 dotgothic16-regular">About me</h1>
-            <p class="pt-4 dotgothic16-regular">シンタ</p>
-            <p class="dotgothic16-regular">学部１年生です。</p>
-            <p class="dotgothic16-regular">制御工学、ロボティクス、低レイヤーやfpgaなどに興味があります。</p>
-
-            <h2 class="text-4xl dotgothic16-regular pt-8">目標</h2>
-            <div class="text-2xl dotgothic16-regular">
-                <table>
-                    <tr>教養数学を４か月以内に終わらせる</tr>
-                    <tr>
-                        <p>規則正しい生活を送る</p>
-                    </tr>
-                    <tr>
-                        <p>制御工学の専門書を読めむことができるほどの数学の知識をつける</fp>
-                    </tr>
-                    <tr>
-                        <p></p>
-                    </tr>
-                    </table>
+    <main class="bg-amber-400 min-h-screen flex flex-col">
+        <section id="about" class="container mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-2 gap-8 items-center flex-grow scroll-mt-20">
+            <!-- Left Column: Image -->
+            <div class="flex justify-center md:justify-end">
+                <img src="img/ore.jpg" alt="俺" class="w-full max-w-md h-auto object-cover rounded-lg shadow-lg">
             </div>
-        </center>
 
-        <hr class="py-16">
 
-        <center class="pt-16 mr-100 dotgothic16-regular">
-            <h1 class="text-4xl">リンク集</h1>
-            <ul>
-                <li class="text-2xl py-4">
+            <div class="flex flex-col items-center text-center dotgothic16-regular">
+                <h1 class="text-4xl pt-4 md:pt-0 font-bold">About me</h1>
+                <p class="pt-4 text-xl">シンタのホームページ</p>
+                <p class="text-lg">公立はこだて未来大学１年生です。</p>
+                <p class="text-lg px-4">制御工学、ロボティクス、低レイヤーやfpgaなどに興味があります。</p>
+
+                <h2 id="goals" class="text-4xl pt-8 font-bold scroll-mt-20">目標</h2>
+                <div class="text-xl mt-4">
+                    <table class="border-separate border-spacing-y-2">
+                        <tr>
+                            <td>教養数学を４か月以内に終わらせる</td>
+                        </tr>
+                        <tr>
+                            <td>規則正しい生活を送る</td>
+                        </tr>
+                        <tr>
+                            <td>制御工学の専門書を読むことができるほどの数学の知識をつける</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-cyan-800 border-2 mx-8 opacity-50">
+
+        <!-- Links Section -->
+        <section id="links" class="py-12 dotgothic16-regular text-center scroll-mt-20">
+            <h1 class="text-4xl font-bold">リンク集</h1>
+            <ul class="mt-4 space-y-2">
+                <li class="text-2xl hover:text-cyan-800 transition-colors">
                     <a href="https://shinta.sakura.ne.jp/shinta/">シンタ</a>
                 </li>
-                <li class="text-2xl py-2">
-                    <a href="https://x.com/Sinta_FUN">Xサブ</a>
-                </li>
             </ul>
-        </center>
-    </section>
+        </section>
+    </main>
 
-    <hr>
-    <footer class="bg-cyan-800">
-        <center class="py-3 dotgothic16-regular text-4xl">
+    <footer class="bg-cyan-800 text-white">
+        <div class="py-4 dotgothic16-regular text-xl md:text-4xl text-center">
             &copy; 2025 シンタ. All rights reserved.
-        </center>
+        </div>
     </footer>
+    
+    <script src="main.js"></script>
 </body>
 
 </html>
